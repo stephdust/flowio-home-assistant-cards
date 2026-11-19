@@ -116,6 +116,32 @@ abstract class FlowioSerialDeviceCard extends LitElement {
     </button>`;
   }
 
+
+  /** Dedicated equipment silhouettes, not generic MDI "heat" / "gear" icons. */
+  private equipmentIcon(heater: boolean) {
+    return heater ? html`<svg viewBox="0 0 48 48" focusable="false" aria-hidden="true"
+        fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="9" width="41" height="30" rx="3.2"/>
+      <rect x="6.5" y="12" width="27.5" height="24" rx="2"/>
+      <circle cx="20.25" cy="24" r="9.1"/>
+      <circle cx="20.25" cy="24" r="2"/>
+      <path d="M20 21.7 C17 17.5 19.2 14.2 23 15.8 C26.2 17.1 24.8 20.1 21.5 23"/>
+      <path d="M22.4 24.2 C28.5 22.1 31 27.7 27.1 30.3 C24.4 32.4 21.5 29.4 20.3 26"/>
+      <path d="M19.2 26.1 C18.2 32.5 12.8 33.2 11.8 28.6 C11 25.2 14.7 23.1 18.4 23.6"/>
+      <path d="M38.3 15.7 V26 M37.5 31 H39.3 M10.5 39 V41 M38 39 V41"/>
+    </svg>` : html`<svg viewBox="0 0 48 48" focusable="false" aria-hidden="true"
+        fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 20 H10 M5 28 H10 M8 20 V28"/>
+      <circle cx="17.5" cy="24" r="9.1"/>
+      <circle cx="17.5" cy="24" r="4.8"/>
+      <path d="M17.5 19.2 C22 18 25 21 23.7 24.6 C22.9 27.1 19.5 29 17 27.2"/>
+      <path d="M26.6 19 H39.8 Q42.2 19 42.2 21.4 V29.4 Q42.2 32 39.8 32 H26.6"/>
+      <path d="M29.1 20 V31 M32.6 20 V31 M36.2 20 V31 M39.2 20 V31"/>
+      <path d="M12.5 33.5 V37 H21.5 V33.5 M29.5 32 V37 H38 V32"/>
+      <path d="M16.2 14.7 V11 H23 V15"/>
+    </svg>`;
+  }
+
   private heater(config: SerialDeviceCardConfig, hass: Hass) {
     const prefix = config.entity_prefix, slot = config.device_slot;
     const target = numericValue(hass.states[config.setpoint_entity]);
@@ -208,7 +234,7 @@ abstract class FlowioSerialDeviceCard extends LitElement {
     const heat = this.kind === 'polytropic';
     return html`<ha-card>
       <div class="header">
-        <span class="icon-plate"><ha-icon .icon=${heat ? 'mdi:heat-pump' : 'mdi:pump'} aria-hidden="true"></ha-icon></span>
+        <span class="icon-plate">${this.equipmentIcon(heat)}</span>
         <div class="heading"><h3>${config.title}</h3><p>${heat ? 'Pompe à chaleur' : 'Pompe de filtration à vitesse variable'}</p></div>
         <ha-switch .checked=${on === true} .disabled=${this.busy || on === undefined}
           aria-label="Marche / arrêt" @change=${this.togglePower}></ha-switch>
@@ -226,7 +252,7 @@ abstract class FlowioSerialDeviceCard extends LitElement {
     ha-card{overflow:hidden;border-radius:var(--ha-card-border-radius,18px)}
     .header{display:flex;align-items:center;gap:12px;padding:15px 16px;border-bottom:1px solid var(--divider-color);background:linear-gradient(125deg,color-mix(in srgb,var(--primary-color) 10%,var(--ha-card-background,var(--card-background-color))),var(--ha-card-background,var(--card-background-color)))}
     .icon-plate{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border-radius:13px;background:color-mix(in srgb,var(--primary-color) 12%,transparent);color:var(--primary-color)}
-    .icon-plate ha-icon{--mdc-icon-size:28px}
+    .icon-plate svg{display:block;width:38px;height:38px;max-width:100%}
     .heading{min-width:0;flex:1}
     .heading h3{margin:0;font-size:calc(1.03rem * var(--fio-font-scale,1.32));line-height:1.28;overflow-wrap:anywhere}
     .heading p{margin:4px 0 0;color:var(--secondary-text-color);font-size:calc(.72rem * var(--fio-font-scale,1.32));line-height:1.3}
