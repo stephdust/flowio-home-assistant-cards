@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="625" viewBox="0 0 1200 625" role="img" aria-labelledby="title desc">
+<title id="title">Aperçu des deux cartes Flow.io, PAC Polytropic et pompe AquaGem</title>
+<desc id="desc">Maquette illustrative en thème sombre avec mesures de démonstration. La carte PAC affiche la température de piscine, consigne, Fan1 en tours par minute, température extérieure, entrée et sortie eau. La carte AquaGem affiche vitesses réelle et demandée, curseur et présélections.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101e2c"/><stop offset="1" stop-color="#08131e"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#192b3c"/><stop offset="1" stop-color="#111c2a"/></linearGradient>
+  <linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#298aff"/><stop offset="1" stop-color="#0bd5e6"/></linearGradient>
+</defs>
+<rect width="1200" height="625" rx="24" fill="url(#bg)"/>
+<text x="42" y="42" fill="#a9c1d5" font-family="Arial,sans-serif" font-size="16">Flow.io · Home Assistant · Aperçu illustratif</text>
+<g font-family="Arial,sans-serif">
+  <rect x="30" y="69" width="555" height="525" rx="20" fill="url(#panel)" stroke="#365e7e" stroke-width="1.4"/>
+  <rect x="615" y="69" width="555" height="525" rx="20" fill="url(#panel)" stroke="#365e7e" stroke-width="1.4"/>
+  <rect x="50" y="89" width="64" height="64" rx="14" fill="#263b50"/>
+  <text x="82" y="133" text-anchor="middle" fill="#5accff" font-size="33">♨</text>
+  <text x="130" y="117" fill="#f5fbff" font-weight="700" font-size="26">PAC Polytropic</text>
+  <text x="130" y="143" fill="#b8c6d5" font-size="16">Pompe à chaleur</text>
+  <rect x="493" y="102" width="64" height="32" rx="16" fill="url(#sw)"/><circle cx="539" cy="118" r="13" fill="#fff"/>
+  <rect x="50" y="177" width="164" height="35" rx="18" fill="#1d553c"/>
+  <text x="132" y="201" text-anchor="middle" fill="#aff8c9" font-size="17" font-weight="700">● En chauffe</text>
+  <path d="M50 231H565M50 318H565M50 410H565" stroke="#34495f" stroke-width="1"/>
+  <text x="55" y="258" fill="#b5c4d1" font-size="16">Temp. piscine</text>
+  <text x="55" y="291" fill="#fff" font-size="28" font-weight="700">27,4 °C</text>
+  <text x="330" y="258" fill="#b5c4d1" font-size="16">Consigne</text>
+  <rect x="328" y="268" width="35" height="36" rx="8" fill="#2b4057" stroke="#4c6a83"/>
+  <text x="345" y="294" text-anchor="middle" fill="#f3faff" font-size="25">−</text>
+  <text x="425" y="292" text-anchor="middle" fill="#fff" font-size="24" font-weight="700">28,0 °C</text>
+  <rect x="486" y="268" width="35" height="36" rx="8" fill="#2b4057" stroke="#4c6a83"/>
+  <text x="503" y="294" text-anchor="middle" fill="#f3faff" font-size="25">+</text>
+  <text x="55" y="347" fill="#b5c4d1" font-size="16">Fan1 · vitesse réelle</text>
+  <text x="55" y="384" fill="#fff" font-size="26" font-weight="700">780 tr/min</text>
+  <text x="330" y="347" fill="#b5c4d1" font-size="16">Température extérieure</text>
+  <text x="330" y="384" fill="#fff" font-size="26" font-weight="700">14,8 °C</text>
+  <text x="55" y="448" fill="#b5c4d1" font-size="16">Entrée eau</text><text x="548" y="448" text-anchor="end" fill="#fff" font-size="18" font-weight="700">26,8 °C</text>
+  <path d="M50 458H565" stroke="#34495f"/>
+  <text x="55" y="486" fill="#b5c4d1" font-size="16">Sortie eau</text><text x="548" y="486" text-anchor="end" fill="#fff" font-size="18" font-weight="700">28,1 °C</text>
+  <path d="M50 495H565" stroke="#34495f"/>
+  <text x="55" y="524" fill="#b5c4d1" font-size="16">Compresseur</text><text x="548" y="524" text-anchor="end" fill="#9bf2b7" font-size="18" font-weight="700">En marche</text>
+  <path d="M50 532H565" stroke="#34495f"/>
+  <text x="55" y="561" fill="#b5c4d1" font-size="16">Défaut compresseur</text><text x="548" y="561" text-anchor="end" fill="#fff" font-size="18">Aucun</text>
+  <rect x="634" y="89" width="64" height="64" rx="14" fill="#263b50"/>
+  <text x="666" y="132" text-anchor="middle" fill="#5accff" font-size="31">⚙</text>
+  <text x="714" y="117" fill="#f5fbff" font-weight="700" font-size="24">Pompe AquaGem</text>
+  <text x="714" y="143" fill="#b8c6d5" font-size="16">Filtration à vitesse variable</text>
+  <rect x="1078" y="102" width="64" height="32" rx="16" fill="url(#sw)"/><circle cx="1124" cy="118" r="13" fill="#fff"/>
+  <path d="M635 231H1148M635 324H1148" stroke="#34495f"/>
+  <text x="651" y="267" fill="#b5c4d1" font-size="16">Vitesse réelle</text>
+  <text x="651" y="302" fill="#fff" font-weight="700" font-size="27">1 800 tr/min</text>
+  <text x="916" y="267" fill="#b5c4d1" font-size="16">Vitesse demandée</text>
+  <text x="916" y="302" fill="#fff" font-weight="700" font-size="27">1 800 tr/min</text>
+  <text x="650" y="358" fill="#b5c4d1" font-size="17">Consigne vitesse</text>
+  <rect x="650" y="389" width="40" height="42" rx="10" stroke="#456783" fill="#2b4057"/><text x="670" y="418" fill="#fff" text-anchor="middle" font-size="27">−</text>
+  <rect x="710" y="405" width="357" height="10" rx="5" fill="#3c5169"/>
+  <rect x="710" y="405" width="181" height="10" rx="5" fill="url(#sw)"/>
+  <circle cx="891" cy="410" r="14" stroke="#8fc8ff" stroke-width="2" fill="#fff"/>
+  <rect x="1087" y="389" width="40" height="42" rx="10" stroke="#456783" fill="#2b4057"/><text x="1107" y="418" fill="#fff" text-anchor="middle" font-size="27">+</text>
+  <text x="708" y="445" fill="#aebed0" font-size="14">600 tr/min</text><text x="1068" y="445" fill="#aebed0" font-size="14" text-anchor="end">3 000 tr/min</text>
+
+<rect x="644" y="480" width="158" height="87" rx="13" fill="#223448" stroke="#4d677e" stroke-width="1"/>
+<text x="723" y="514" text-anchor="middle" fill="#f5fbff" font-size="20" font-weight="700">Éco</text><text x="723" y="544" text-anchor="middle" fill="#d2e4f1" font-size="16">1 200 tr/min</text>
+<rect x="815" y="480" width="158" height="87" rx="13" fill="#145083" stroke="#39b7ff" stroke-width="2"/>
+<text x="894" y="514" text-anchor="middle" fill="#f5fbff" font-size="20" font-weight="700">Normal</text><text x="894" y="544" text-anchor="middle" fill="#d2e4f1" font-size="16">1 800 tr/min</text>
+<rect x="986" y="480" width="158" height="87" rx="13" fill="#223448" stroke="#4d677e" stroke-width="1"/>
+<text x="1065" y="514" text-anchor="middle" fill="#f5fbff" font-size="20" font-weight="700">Boost</text><text x="1065" y="544" text-anchor="middle" fill="#d2e4f1" font-size="16">2 700 tr/min</text>
+</g><text x="600" y="609" text-anchor="middle" fill="#7e97ac" font-family="Arial,sans-serif" font-size="12">Maquette de présentation · valeurs fictives · les mesures réelles dépendent des entités Home Assistant</text></svg>

@@ -12,6 +12,36 @@ Cartes de supervision et de pilotage pour les entités MQTT du firmware Flow.io-
 
 ## Cartes
 
+### Nouvelles cartes : PAC Polytropic et AquaGem (branche de développement)
+
+![Maquette illustrative des cartes PAC Polytropic et pompe AquaGem — thème sombre](docs/polytropic-aquagem-preview.svg)
+
+*Illustration de présentation avec des valeurs fictives, et non une capture du rendu réel dans Home Assistant. Ces cartes ne sont pas encore disponibles dans la distribution HACS stable.*
+
+**Exemples de configuration Lovelace :**
+
+```yaml
+type: custom:flowio-polytropic-card
+entity_prefix: fio
+device_slot: 7
+```
+
+```yaml
+type: custom:flowio-aquagem-card
+entity_prefix: fio
+device_slot: 0
+eco_rpm: 1200
+normal_rpm: 1800
+boost_rpm: 2700
+```
+
+Les deux cartes spécialisées RS485 (PAC Polytropic et pompe AquaGem) reprennent la présentation Flow.io. Elles lisent les entités Home Assistant déjà exposées par Flow.io, sans nouvelle charge réseau :
+
+- `custom:flowio-polytropic-card` : PAC Polytropic, Fan1 en tr/min, température extérieure, températures de l'eau, consigne et état compresseur.
+- `custom:flowio-aquagem-card` : pompe AquaGem à vitesse variable, vitesses demandée et mesurée, curseur et préréglages Éco / Normal / Boost.
+
+Voir [installation et correspondance des entités](docs/POLYTROPIC-AQUAGEM.md).
+
 - `custom:flowio-header-card` : bandeau compact « état du bassin » avec le statut, une phrase de contexte et les jauges Eau · ORP · Air.
 - `custom:flowio-filtration-card` : plage de filtration calculée (frise, début, fin, durée prévue).
 - `custom:flowio-treatment-card` : informations du traitement actif, adaptées au type configuré (chlore/brome, électrolyse, oxygène actif, désactivé).
