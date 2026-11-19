@@ -14,3 +14,4 @@ import './flowio-history-card';
 import './flowio-state-history-card';
 import './flowio-actuator-card';
 import './flowio-alarm-detail-card';
+import './flowio-serial-device-cards';

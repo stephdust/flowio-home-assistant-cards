@@ -12,6 +12,13 @@ Cartes de supervision et de pilotage pour les entités MQTT du firmware Flow.io-
 
 ## Cartes
 
+Les deux cartes spécialisées RS485 (PAC Polytropic et pompe AquaGem) reprennent la présentation Flow.io. Elles lisent les entités Home Assistant déjà exposées par Flow.io, sans nouvelle charge réseau :
+
+- `custom:flowio-polytropic-card` : PAC Polytropic, Fan1 en tr/min, température extérieure, températures de l'eau, consigne et état compresseur.
+- `custom:flowio-aquagem-card` : pompe AquaGem à vitesse variable, vitesses demandée et mesurée, curseur et préréglages Éco / Normal / Boost.
+
+Voir [installation et correspondance des entités](docs/POLYTROPIC-AQUAGEM.md).
+
 - `custom:flowio-header-card` : bandeau compact « état du bassin » avec le statut, une phrase de contexte et les jauges Eau · ORP · Air.
 - `custom:flowio-filtration-card` : plage de filtration calculée (frise, début, fin, durée prévue).
 - `custom:flowio-treatment-card` : informations du traitement actif, adaptées au type configuré (chlore/brome, électrolyse, oxygène actif, désactivé).
