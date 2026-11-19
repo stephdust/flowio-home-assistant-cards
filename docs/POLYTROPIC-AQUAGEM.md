@@ -2,6 +2,12 @@
 
 Deux cartes Lovelace indépendantes, suivant le style des cartes Flow.io existantes (en-tête, couleurs du thème, composants natifs Home Assistant, présentation compacte). Elles lisent exclusivement l'état des entités Home Assistant déjà exposées par Flow.io. Elles ne font **aucune interrogation Modbus, aucun polling et aucun envoi MQTT direct**.
 
+## Aperçu (illustration)
+
+![Maquette des cartes PAC Polytropic et pompe AquaGem](polytropic-aquagem-preview.svg)
+
+*Maquette illustrative en thème sombre, valeurs de démonstration. Le rendu effectif dépend du thème Home Assistant et des entités disponibles. La version de développement n'est pas encore intégrée à la distribution stable.*
+
 ## PAC Polytropic
 
 ~~~yaml
